@@ -13,6 +13,11 @@ const sequelize = new Sequelize(config.DB.DATABASE, config.DB.USER, config.DB.PA
     define: {
       timestamps: false,
     },
+    protocol: 'postgres',
+    dialectOptions: {
+      ssl: true,
+      native: true,
+    },
     pool: {
       max: 5,
       min: 0,
