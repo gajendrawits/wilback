@@ -17,7 +17,7 @@ const getEnvVariable = (key) => {
 const config = {
   DB: {
     HOST: getEnvVariable('HOST'),
-    USER: 'postgres',
+    USER: getEnvVariable('USER'),
     DATABASE: getEnvVariable('DATABASE'),
     PASSWORD: getEnvVariable('PASSWORD'),
   },
